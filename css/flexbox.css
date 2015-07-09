@@ -1,0 +1,175 @@
+/** Setup Classes **/
+.app-header-wrapper {
+	background-color: #2982ff;
+	position: absolute;
+	height: 60px;
+	right: 0;
+	left: 0;
+	top: 0;
+}
+
+.app-header {
+	margin: 0 0 0 10px;
+	line-height: 60px;
+	color: #FFF;
+}
+
+.app-content {
+	position: absolute;
+	overflow: auto;
+	top: 60px;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+
+.example-section {
+	margin: 15px 0;
+}
+
+.section-header {
+	margin: 5px 0 5px 10px;
+	font-weight: bold;
+	font-size: 18px;
+}
+/** Setup Classes **/	
+
+/** Examples CSS **/
+/** Perfect Center **/
+.perfect-center .parent {
+	background: #00FF00;
+	/* Create a Flex layout context */
+	display: -webkit-flex;
+	display: flex;
+	height: 150px;
+}
+
+.perfect-center .child {
+	background-color: #FF0000;
+	height: 100px;
+	width: 100px;
+	margin: auto;
+}
+/** Perfect Center **/
+/** Flex Flow **/
+.flex-container {
+	background-color: gray;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	/* Create a Flex layout context */
+	display: -webkit-flex;
+	display: flex;
+	/* Shorthand syntax for the following:
+	 * flex-direction: row;
+	 * flex-wrap: wrap;
+	 */
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	/* Define how remaining space is distributed */
+	justify-content: space-around;
+}
+
+.flex-item {
+	background: tomato;
+	line-height: 150px;
+	text-align: center;
+	font-weight: bold;
+	margin: 10px 0;
+	font-size: 3em;
+	color: #FFFFFF;
+	height: 150px;
+	width: 200px;
+	padding: 5px;
+}
+/** Flex Flow **/
+/** Navigation Example **/
+.navigation {
+	background-color: deepskyblue;
+	list-style: none;
+	margin: 0;
+
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+
+	justify-content: flex-end;
+}
+
+.navigation a {
+	text-decoration: none;
+	display: block;
+	padding: 1em;
+	color: #FFF;
+}
+
+.navigation a:hover {
+  background: darken(deepskyblue, 20%);
+}
+
+@media all and (max-width: 800px) {
+  .navigation {
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .navigation {
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+    padding: 0;
+  }
+  
+  .navigation a { 
+    text-align: center; 
+    padding: 10px;
+    border-top: 1px solid rgba(255,255,255,0.3); 
+    border-bottom: 1px solid rgba(0,0,0,0.1); 
+  }
+
+  
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+}
+/** Navigation Example **/
+/** Panel Example **/
+.wrapper {
+	flex-flow: row wrap;
+	text-align: center;
+	font-weight: bold;
+	display: flex;
+}
+.wrapper > * {
+	padding: 10px;
+	flex: 1 100%;
+}
+.header {
+	background: tomato;
+}
+.footer {
+	background: lightgreen;
+}
+.main {
+	background: deepskyblue;
+	text-align: left;
+}
+.aside-1 {
+	background: gold;
+}
+.aside-2 {
+	background: hotpink;
+}
+@media all and (min-width: 600px) {
+	.aside { flex: 1 auto; }
+}
+@media all and (min-width: 800px) {
+	.main { flex: 3 0px; }
+	.aside-1 { order: 1; }
+	.main 	 { order: 2; }
+	.aside-2 { order: 3; }
+	.footer  { order: 4; }
+}
+/** Panel Example **/
+/** Examples CSS **/
